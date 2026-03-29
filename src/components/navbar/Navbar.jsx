@@ -9,7 +9,7 @@ const Navbar = () => {
   const [dropdown, setDropdown] = useState(false);
 
   return (
-    <nav className='max-w-400 mx-auto flex justify-between items-center px-4 py-2 lg:py-6 lg:px-10'>
+    <nav className='max-w-400 mx-auto bg-white flex justify-between items-center px-4 py-2 lg:py-6 lg:px-10'>
 
       {/* Nav bar Start */}
       <div className='flex justify-center items-center gap-3'>
@@ -28,7 +28,7 @@ const Navbar = () => {
         </button>
 
         {/* Logo of digi-tools  */}
-        <div className='w-35 lg:w-auto'>
+        <div className='w-35 lg:w-auto cursor-pointer'>
           <img src={digitoolsIMG} alt="DigiTools logo" />
         </div>
       </div>
@@ -39,7 +39,7 @@ const Navbar = () => {
       </div>
 
       {/* Dropdown menu */}
-      <div className={` ${dropdown ? 'top-15' : '-top-60'} duration-300 lg:hidden absolute shadow-md rounded-b-2xl border-2 border-[#4F39F680] w-40 px-5 py-5 -z-10`}>
+      <div className={` ${dropdown ? 'top-15' : '-top-60'} duration-300 lg:hidden absolute shadow-md rounded-b-2xl border-2 border-[#4F39F680] bg-white w-40 px-5 py-5 -z-10`}>
         <Navigations ulStyle={`space-y-3 [&_li]:btn [&_li]:border-[#4F39F670] [&_li]:w-full  [&_li]:border`} />
       </div>
 
