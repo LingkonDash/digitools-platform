@@ -48,11 +48,11 @@ const Navbar = () => {
       <div className='flex justify-center items-center'>
 
         {/* cart */}
-        <button className='p-2 active:scale-95 cursor-pointer rounded-xl hover:bg-base-300 border-none bg-transparent shadow-none'>
-          <img src={cartImg} alt="Cart" />
+        <button className='p-2 mr-2 md:mr-0 active:scale-95 cursor-pointer rounded-xl hover:bg-base-300 border-none bg-transparent shadow-none'>
+          <img className='w-5 h-5' src={cartImg} alt="Cart" />
         </button>
 
-        <p className='font-medium text-primary-text border-3 border-transparent hover:border-b-gradient-end transition ml-2 mr-4'>
+        <p className='hidden md:flex font-medium text-primary-text border-3 border-transparent hover:border-b-gradient-end transition ml-2 mr-4'>
           <a href="#">Login</a>
         </p>
 

@@ -5,7 +5,7 @@ import banner from '../../assets/banner.png'
 
 const HeroSection = () => {
   return (
-    <section className='grid md:grid-cols-2 md:place-items-center md:flex-row gap-10 py-5'>
+    <section className='grid md:grid-cols-2 md:place-items-center md:flex-row gap-10 pb-5 pt-23 lg:pt-30 max-w-400 mx-auto px-6 lg:px-10'>
 
       <div className='space-y-2'>
         <div className='px-4 py-2 rounded-full bg-[#E1E7FF] flex justify-center items-center gap-2 w-fit'>
@@ -27,7 +27,7 @@ const HeroSection = () => {
           </p>
         </div>
 
-        <div className='flex mt-5 gap-4'>
+        <div className='flex flex-wrap mt-5 gap-4'>
           <button className='p-4 lg:p-6 text-lg rounded-full btn border-none font-semibold text-white bg-linear-to-r from-gradient-start to-gradient-end'>
             Explore Products
           </button>

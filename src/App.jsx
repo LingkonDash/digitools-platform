@@ -1,4 +1,5 @@
 import HeroSection from "./components/body/HeroSection"
+import SateSection from "./components/body/SateSection"
 import Navbar from "./components/navbar/Navbar"
 
 
@@ -11,8 +12,11 @@ function App() {
         <Navbar />
       </header>
 
-      <main className="pt-18 lg:pt-25 max-w-400 mx-auto px-6 lg:px-10">
+      <main>
+
         <HeroSection />
+        <SateSection />
+
       </main>
 
     </>
