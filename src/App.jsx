@@ -1,4 +1,5 @@
 import HeroSection from "./components/body/HeroSection"
+import MainSection from "./components/body/MainSection"
 import SateSection from "./components/body/SateSection"
 import Navbar from "./components/navbar/Navbar"
 
@@ -16,6 +17,8 @@ function App() {
 
         <HeroSection />
         <SateSection />
+        
+        <MainSection />
 
       </main>
 
