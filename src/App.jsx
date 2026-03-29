@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <header className="shadow-sm">
+      <header className="shadow-sm bg-white z-10">
 
         <Navbar />
 
