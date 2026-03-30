@@ -18,3 +18,7 @@
 * {
   font-family: "Manrope", sans-serif;
 }
+
+body {
+  cursor: default;
+}

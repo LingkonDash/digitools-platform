@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import Card from './Card';
 
 const MainSection = () => {
 
   const [active, setActive] = useState('products')
+
+  const arr = [1, 2, 3, 4, 5, 6]
 
   return (
     <section className='max-w-400 mx-auto px-6 lg:px-10 py-10 md:py-20'>
@@ -19,7 +22,7 @@ const MainSection = () => {
               className={`btn p-5 w-30 rounded-full border-none transition-all duration-300
                 ${active === "products"
                   ? "bg-linear-to-l to-gradient-start from-gradient-end text-white"
-                  : "text-gray-500 bg-base-100 shadow-sm"
+                  : "text-secondary-text bg-base-100 shadow-sm"
                 }`}
             >
               Products
@@ -31,7 +34,7 @@ const MainSection = () => {
               className={`btn p-5 w-30 rounded-full border-none transition-all duration-300
                 ${active === "cart"
                   ? "bg-linear-to-l to-gradient-start from-gradient-end text-white"
-                  : "text-gray-500 bg-base-100 shadow-sm"
+                  : "text-secondary-text bg-base-100 shadow-sm"
                 }`}
             >
               Cart (0)
@@ -41,8 +44,11 @@ const MainSection = () => {
         </div>
       </div>
 
-      <div>
-        
+      {/* all cards will load here */}
+      <div className='grid grid-cols-3 max-w-7xl mx-auto gap-7'>
+        {
+          arr.map(e => <Card key={e}/>)
+        }
       </div>
     </section>
   );
