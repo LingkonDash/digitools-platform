@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import Card from './Card';
-import Cart from './Cart';
+import Cart from './Cart/Cart';
 
-const MainSection = () => {
+const MainSection = ({products}) => {
 
   const [active, setActive] = useState('products')
 
-  const arr = [1, 2, 3, 4, 5, 6]
 
   return (
     <section className='max-w-400 mx-auto px-6 lg:px-10 py-10 md:py-20'>
@@ -49,7 +48,7 @@ const MainSection = () => {
       {
         active === "products" ?
           <div className='grid md:grid-cols-2 lg:grid-cols-3 place-items-center max-w-7xl mt-10 mx-auto gap-7'>
-            { arr.map(e => <Card key={e} />)}
+            { products.map(product => <Card key={product.id} product={product} />)}
           </div> 
 
         :  <div className='max-w-6xl mt-10 mx-auto'>

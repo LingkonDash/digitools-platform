@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"
 import Footer from "./components/body/Footer"
 import HeroSection from "./components/body/HeroSection"
 import MainSection from "./components/body/mainSection/MainSection"
@@ -10,6 +11,18 @@ import Navbar from "./components/navbar/Navbar"
 
 function App() {
 
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch('/products.json')
+      .then(res => res.json())
+      .then(data => {
+
+        setProducts([...data])
+
+      })
+  }, [])
+
   return (
     <>
 
@@ -21,7 +34,7 @@ function App() {
         <HeroSection />
         <SateSection />
 
-        <MainSection />
+        <MainSection products={products}/>
 
         <StepsSection />
         <PricingSection />
