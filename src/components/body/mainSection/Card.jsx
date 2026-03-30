@@ -4,7 +4,7 @@ import { Check } from 'lucide-react';
 
 const Card = () => {
   return (
-    <div className='relative space-y-4 shadow-sm p-6 rounded-lg border border-gray-300 group hover:border-gradient-start hover:-translate-y-2 transition-all duration-300'>
+    <div className='max-w-105 relative space-y-4 shadow-sm p-6 rounded-lg border border-gray-300 group hover:border-gradient-start hover:-translate-y-2 transition-all duration-300'>
 
       <div className='p-3.5 rounded-full border border-gray-300 shadow-sm w-fit'>
         <img src={aiImage} alt="mn" />

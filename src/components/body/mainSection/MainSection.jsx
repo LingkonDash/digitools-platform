@@ -45,7 +45,7 @@ const MainSection = () => {
       </div>
 
       {/* all cards will load here */}
-      <div className='grid grid-cols-3 max-w-7xl mx-auto gap-7'>
+      <div className='grid md:grid-cols-2 lg:grid-cols-3 place-items-center max-w-7xl mx-auto gap-7'>
         {
           arr.map(e => <Card key={e}/>)
         }
