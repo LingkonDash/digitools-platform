@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Card from './Card';
+import Cart from './Cart';
 
 const MainSection = () => {
 
@@ -45,11 +46,17 @@ const MainSection = () => {
       </div>
 
       {/* all cards will load here */}
-      <div className='grid md:grid-cols-2 lg:grid-cols-3 place-items-center max-w-7xl mt-10 mx-auto gap-7'>
-        {
-          arr.map(e => <Card key={e}/>)
-        }
-      </div>
+      {
+        active === "products" ?
+          <div className='grid md:grid-cols-2 lg:grid-cols-3 place-items-center max-w-7xl mt-10 mx-auto gap-7'>
+            { arr.map(e => <Card key={e} />)}
+          </div> 
+
+        :  <div className='max-w-6xl mt-10 mx-auto'>
+            <Cart />
+          </div>
+      }
+
     </section>
   );
 };
