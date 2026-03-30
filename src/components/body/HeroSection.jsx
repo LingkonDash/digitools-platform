@@ -28,11 +28,11 @@ const HeroSection = () => {
         </div>
 
         <div className='flex flex-wrap mt-5 gap-4'>
-          <button className='p-4 lg:p-6 text-lg rounded-full btn border-none font-semibold text-white bg-linear-to-r from-gradient-start to-gradient-end'>
+          <button className='p-4 lg:p-6 md:text-lg rounded-full btn border-none font-semibold text-white bg-linear-to-r from-gradient-start to-gradient-end'>
             Explore Products
           </button>
 
-          <button className='p-4 lg:p-6 text-lg rounded-full btn hover:bg-base-100 border-2 font-semibold border-gradient-end'>
+          <button className='p-4 lg:p-6 md:text-lg rounded-full btn hover:bg-base-100 border-2 font-semibold border-gradient-end'>
             <img src={play} alt="" />
             <span className="bg-linear-to-r from-gradient-start to-gradient-end bg-clip-text text-transparent">
               Watch Demo

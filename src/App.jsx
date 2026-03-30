@@ -3,6 +3,7 @@ import MainSection from "./components/body/mainSection/MainSection"
 import PricingSection from "./components/body/PricingSection"
 import SateSection from "./components/body/SateSection"
 import StepsSection from "./components/body/StepsSection"
+import WorkflowSection from "./components/body/WorkflowSection"
 import Navbar from "./components/navbar/Navbar"
 
 
@@ -24,6 +25,7 @@ function App() {
 
         <StepsSection />
         <PricingSection />
+        <WorkflowSection />
 
       </main>
 
