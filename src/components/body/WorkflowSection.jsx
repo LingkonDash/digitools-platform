@@ -2,7 +2,7 @@ import React from 'react';
 
 const WorkflowSection = () => {
   return (
-    <section className='py-5'>
+    <section>
 
       <div className='bg-linear-to-l px-5 gap-4 to-gradient-start from-gradient-end py-15 flex flex-col justify-center items-center text-center'>
 

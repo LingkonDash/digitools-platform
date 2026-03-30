@@ -1,3 +1,4 @@
+import Footer from "./components/body/Footer"
 import HeroSection from "./components/body/HeroSection"
 import MainSection from "./components/body/mainSection/MainSection"
 import PricingSection from "./components/body/PricingSection"
@@ -17,7 +18,6 @@ function App() {
       </header>
 
       <main>
-
         <HeroSection />
         <SateSection />
 
@@ -26,8 +26,11 @@ function App() {
         <StepsSection />
         <PricingSection />
         <WorkflowSection />
-
       </main>
+
+      <footer>
+        <Footer />
+      </footer>
 
     </>
   )
