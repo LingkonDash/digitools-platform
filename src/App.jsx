@@ -7,11 +7,13 @@ import SateSection from "./components/body/SateSection"
 import StepsSection from "./components/body/StepsSection"
 import WorkflowSection from "./components/body/WorkflowSection"
 import Navbar from "./components/navbar/Navbar"
+import { ToastContainer } from "react-toastify"
 
 
 function App() {
 
   const [products, setProducts] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
     fetch('/products.json')
@@ -34,7 +36,7 @@ function App() {
         <HeroSection />
         <SateSection />
 
-        <MainSection products={products}/>
+        <MainSection products={products} setCartItems={setCartItems} cartItems={cartItems}/>
 
         <StepsSection />
         <PricingSection />
@@ -44,7 +46,7 @@ function App() {
       <footer>
         <Footer />
       </footer>
-
+      <ToastContainer />
     </>
   )
 }

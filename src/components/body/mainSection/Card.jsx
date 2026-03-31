@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Check } from 'lucide-react';
+import { toast } from 'react-toastify';
 
-const Card = ({ product }) => {
+const Card = ({ product, setCartItems, cartItems }) => {
 
-  console.log(product);
+  const [isClicked, setIsclicked] = useState(false);
+
+  function buyNowHandler() {
+    setCartItems([...cartItems, product]);
+    setIsclicked(true);
+
+    toast.success(`${product.name} Added to cart!`)
+  }
 
   return (
     <div className='max-w-105 relative space-y-4 shadow-sm p-6 rounded-2xl border border-gray-300 group hover:border-gradient-start hover:-translate-y-2 transition-all duration-300'>
@@ -13,13 +21,13 @@ const Card = ({ product }) => {
       </div>
 
       {/* Badge */}
-      <div 
-      className={`absolute right-2.5 top-2.5 badge badge-soft 
-        ${ product.tagType === 'best seller' ? 'badge-warning bg-[#FEF3C6]' 
-          :  product.tagType === 'popular' ? 'badge-primary' 
-          : 'badge-success'  }`}
+      <div
+        className={`absolute right-2.5 top-2.5 badge badge-soft 
+        ${product.tagType === 'best seller' ? 'badge-warning bg-[#FEF3C6]'
+            : product.tagType === 'popular' ? 'badge-primary'
+              : 'badge-success'}`}
       >
-        <p className={ product.tagType === 'best seller' ? 'text-[#BB4D00]' : ''}>{product.tag}</p>
+        <p className={product.tagType === 'best seller' ? 'text-[#BB4D00]' : ''}>{product.tag}</p>
       </div>
 
 
@@ -35,8 +43,15 @@ const Card = ({ product }) => {
         }
       </div>
 
-      <button className='p-8 text-lg rounded-full btn w-full border-none font-bold text-[16px] text-white bg-linear-to-r from-gradient-start to-gradient-end'>
-        Buy Now
+      <button
+        onClick={buyNowHandler}
+        className={`p-4 text-lg rounded-full w-full font-bold text-white flex items-center justify-center gap-1 transition-all duration-300 ease-in-out cursor-pointer
+          ${isClicked
+            ? 'bg-[#0A883E] hover:bg-[#097a37]'
+            : 'bg-linear-to-r from-gradient-start to-gradient-end hover:opacity-90 hover:shadow-lg'
+          }`}
+      >
+        { isClicked ? <> <Check /> Added to cart </> : "Buy Now" }
       </button>
     </div>
   );

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Card from './Card';
 import Cart from './Cart/Cart';
 
-const MainSection = ({products}) => {
+const MainSection = ({products, setCartItems, cartItems}) => {
 
   const [active, setActive] = useState('products')
 
@@ -37,7 +37,7 @@ const MainSection = ({products}) => {
                   : "text-secondary-text bg-base-100 shadow-sm"
                 }`}
             >
-              Cart (0)
+              Cart ({cartItems.length})
             </button>
 
           </div>
@@ -48,11 +48,11 @@ const MainSection = ({products}) => {
       {
         active === "products" ?
           <div className='grid md:grid-cols-2 lg:grid-cols-3 place-items-center max-w-7xl mt-10 mx-auto gap-7'>
-            { products.map(product => <Card key={product.id} product={product} />)}
+            { products.map(product => <Card key={product.id} product={product} setCartItems={setCartItems} cartItems={cartItems} />)}
           </div> 
 
         :  <div className='max-w-6xl mt-10 mx-auto'>
-            <Cart />
+            <Cart setCartItems={setCartItems} cartItems={cartItems}/>
           </div>
       }
 
