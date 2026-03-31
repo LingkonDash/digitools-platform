@@ -1,16 +1,15 @@
 import React from 'react';
-import aiImage from '../../../assets/products/writing-ai.png';
 import { Check } from 'lucide-react';
 
 const Card = ({ product }) => {
 
-  console.log(product.tagType);
+  console.log(product);
 
   return (
     <div className='max-w-105 relative space-y-4 shadow-sm p-6 rounded-2xl border border-gray-300 group hover:border-gradient-start hover:-translate-y-2 transition-all duration-300'>
 
       <div className='p-3.5 rounded-full border border-gray-300 shadow-sm w-fit'>
-        <img src={aiImage} alt="mn" />
+        <img className='w-8 h-8' src={product.icon} alt={product.name} />
       </div>
 
       {/* Badge */}

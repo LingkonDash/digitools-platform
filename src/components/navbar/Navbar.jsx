@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { TextAlignStart, X } from 'lucide-react';
+import { ShoppingCart, TextAlignStart, X } from 'lucide-react';
 import digitoolsIMG from '../../assets/DigiTools.png'
-import cartImg from '../../assets/products/shopping-cart.png'
 import Navigations from './Navigations';
 
 const Navbar = () => {
@@ -49,7 +48,7 @@ const Navbar = () => {
 
         {/* cart */}
         <button className='p-2 mr-2 md:mr-0 active:scale-95 cursor-pointer rounded-xl hover:bg-base-300 border-none bg-transparent shadow-none'>
-          <img className='w-5 h-5' src={cartImg} alt="Cart" />
+          <ShoppingCart color="#101727" />
         </button>
 
         <p className='hidden md:flex font-medium text-primary-text border-3 border-transparent hover:border-b-gradient-end transition ml-2 mr-4'>
