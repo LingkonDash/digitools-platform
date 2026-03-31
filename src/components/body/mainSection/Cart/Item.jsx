@@ -4,13 +4,8 @@ import { toast } from 'react-toastify';
 const Item = ({ setCartItems, cartItems, item }) => {
 
   function removeHandler() {
-    const index = cartItems.findIndex(e => e.id === item.id);
-
-    if (index !== -1) {
-      const newData = [...cartItems];
-      newData.splice(index, 1);
-      setCartItems(newData);
-    }
+    const newData = cartItems.filter(e => e.id !== item.id);
+    setCartItems(newData);
 
     toast.success(`${item.name} removed successfully!`);
   }

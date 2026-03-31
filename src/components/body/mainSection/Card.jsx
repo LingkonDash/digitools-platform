@@ -7,6 +7,14 @@ const Card = ({ product, setCartItems, cartItems }) => {
   const [isClicked, setIsclicked] = useState(false);
 
   function buyNowHandler() {
+
+    const isAvailable = cartItems.find(e => e.id === product.id);
+
+    if (isAvailable) {
+      toast.error(`${product.name} is already in the cart!`);
+      return;
+    }
+
     setCartItems([...cartItems, product]);
     setIsclicked(true);
 
