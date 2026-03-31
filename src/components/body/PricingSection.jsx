@@ -3,7 +3,7 @@ import React from 'react';
 
 const PricingSection = () => {
   return (
-    <section className='max-w-400 mx-auto px-6 lg:px-10 py-10 md:py-20'>
+    <section id='pricing' className='max-w-400 mx-auto px-6 lg:px-10 py-10 md:py-20'>
 
       <div className='text-center space-y-2'>
         <h2 className='font-extrabold text-primary-text text-3xl md:text-5xl'>Simple, Transparent Pricing</h2>

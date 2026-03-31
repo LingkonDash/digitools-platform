@@ -29,7 +29,7 @@ function App() {
     <>
 
       <header className="shadow-sm bg-white z-10 fixed w-full">
-        <Navbar />
+        <Navbar cartItems={cartItems}/>
       </header>
 
       <main>
@@ -46,7 +46,7 @@ function App() {
       <footer>
         <Footer />
       </footer>
-      <ToastContainer />
+      <ToastContainer style={{ top: "100px" }}/>
     </>
   )
 }

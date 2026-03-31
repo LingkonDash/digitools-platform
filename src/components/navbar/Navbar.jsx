@@ -3,7 +3,7 @@ import { ShoppingCart, TextAlignStart, X } from 'lucide-react';
 import digitoolsIMG from '../../assets/DigiTools.png'
 import Navigations from './Navigations';
 
-const Navbar = () => {
+const Navbar = ({ cartItems }) => {
 
   const [dropdown, setDropdown] = useState(false);
 
@@ -47,8 +47,14 @@ const Navbar = () => {
       <div className='flex justify-center items-center'>
 
         {/* cart */}
-        <button className='p-2 mr-2 md:mr-0 active:scale-95 cursor-pointer rounded-xl hover:bg-base-300 border-none bg-transparent shadow-none'>
+        <button className='relative p-2 mr-2 md:mr-0 active:scale-95 cursor-pointer rounded-xl hover:bg-base-300 border-none bg-transparent shadow-none'>
           <ShoppingCart color="#101727" />
+
+          {
+            cartItems.length === 0 ? ''
+              : <div className='absolute -top-2 -right-1 p-1 px-1.5 font-semibold rounded-full text-xs bg-red-500 text-white'> {cartItems.length} </div>
+          }
+
         </button>
 
         <p className='hidden md:flex font-medium text-primary-text border-3 border-transparent hover:border-b-gradient-end transition ml-2 mr-4'>

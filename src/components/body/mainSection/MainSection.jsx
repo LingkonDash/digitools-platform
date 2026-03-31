@@ -8,7 +8,7 @@ const MainSection = ({products, setCartItems, cartItems}) => {
 
 
   return (
-    <section className='max-w-400 mx-auto px-6 lg:px-10 py-10 md:py-20'>
+    <section id='products' className='max-w-400 mx-auto px-6 lg:px-10 py-10 md:py-20'>
       <div className='text-center space-y-4 md:space-y-6'>
         <h1 className='font-extrabold text-4xl md:text-5xl text-primary-text'>Premium Digital Tools</h1>
         <p className='text-secondary-text text-xs md:text-[1rem]'>Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>
